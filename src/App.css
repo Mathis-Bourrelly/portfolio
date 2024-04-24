@@ -1,31 +1,148 @@
 
 html {
     background-color: var(--color-background);
-    color: var(--color-foreground);
+    color: var(--color-text);
 }
 
 html {
-    --color-background: #fafafa;
-    --color-foreground: #1f2023;
+    --color-background: white;
+    --color-text: #1f2023;
+    --color-nav-background: white;
+    --color-nav-hover-background: #b4b4b4;
+    --color-nav-active-background: rgba(255, 255, 255, 0.43);
 }
 html.dark {
     --color-background: #1f2023;
-    --color-foreground: #efefef;
+    --color-text: #fafafa;
+    --color-nav-background: #333;
+    --color-nav-hover-background: #565656;
+    --color-nav-active-background: #3d3d3d;
 }
 
 @media (prefers-color-scheme: dark) {
     html {
         --color-background: #1f2023;
-        --color-foreground: #efefef;
+        --color-text: #fafafa;
+        --color-nav-background: #333;
+        --color-nav-hover-background: #e31818;
+        --color-nav-active-background: #3d3d3d;
     }
 }
 
 
 html {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     font-size: calc(10px + 2vmin);
+}
+
+/* Add a black background color to the top navigation */
+.nav {
+    position: sticky;
+    top: 0;
+    background: var(--color-nav-background);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    height: 3rem;
+
+}
+
+.nav {
+    transition: background-color .4s ease;
+}
+
+.nav.scrolled{
+    background: rgba(255, 255, 255, 0.33);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(6.6px);
+    -webkit-backdrop-filter: blur(6.6px);
+    border: 0 solid
+}
+
+/* Style the links inside the navigation bar */
+.nav a {
+    height: 3rem;
+    float: left;
+    color: var(--color-text);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    align-content: center;
+}
+
+.nav a:hover {
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Ajoute une ombre au texte au survol */
+}
+
+
+/* Add a color to the active/current link */
+.nav a.active {
+    color: #167acc;
+    background: var(--color-nav-active-background);
+}
+
+.nav-title{
+    font-weight: bold;
+    font-size: 40px !important
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 17px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 13px;
+    width: 13px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(13px);
+    -ms-transform: translateX(13px);
+    transform: translateX(13px);
+}
+
+.slider.round {
+    border-radius: 17px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
 }
