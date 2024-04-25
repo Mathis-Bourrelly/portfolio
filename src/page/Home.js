@@ -1,12 +1,11 @@
-import React from "react"
+import React, {useState} from "react"
 import Layout from "../comp/Layout";
 
 const Home = () => {
-
+    const [currentLang, setCurrentLang] = useState("FR");
     return (
         <>
-            <Layout>
-            </Layout>
+            <Layout currentLang={currentLang} setCurrentLang={setCurrentLang}/>
              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in fermentum felis. Integer at nisi eu nisi euismod consequat quis quis felis. Nunc ullamcorper, nibh fringilla consectetur consectetur, risus neque molestie lacus, vel porta orci elit non purus. Ut sapien massa, pellentesque vel purus id, varius imperdiet lectus. Pellentesque scelerisque eleifend urna, eleifend ullamcorper tellus iaculis euismod. Mauris in ex et felis finibus sollicitudin. Cras placerat tellus vestibulum risus imperdiet, et placerat tellus euismod. Morbi et orci euismod, faucibus odio cursus, mattis orci. Aliquam eu sem urna. Aliquam aliquam ante vitae ante congue commodo.
 
                      Sed at vehicula nibh. Duis egestas molestie ex, et fringilla ex dictum nec. Sed leo eros, placerat ut lorem finibus, porta malesuada massa. Donec vel tempor est, et laoreet mauris. Nullam rutrum lacus sed ante vulputate, sit amet rhoncus nunc molestie. Pellentesque efficitur, turpis et pharetra sollicitudin, tellus quam tempor nisi, sit amet viverra dolor lacus eget neque. Nullam maximus condimentum nibh, sed pellentesque dui rutrum id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque nec commodo felis. Quisque in risus sed lorem mattis sollicitudin. Quisque fermentum suscipit felis, eget interdum purus feugiat eget. Aenean eu egestas mi, at rutrum nibh. Sed lacinia gravida aliquam. Mauris efficitur mauris vitae nisi sollicitudin, non molestie elit volutpat. Aenean at arcu tempus, venenatis turpis at, faucibus dolor.

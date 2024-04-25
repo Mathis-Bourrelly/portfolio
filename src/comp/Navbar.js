@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, {useState, useEffect} from "react";
 import DarkModeToggle from "./DarkModeToggle";
+import LangButton from "./langButton";
 
-const Navbar = () => {
+const Navbar = ({currentLang, setCurrentLang}) => {
     const [isScrolled, setIsScrolled] = useState(false);
 
     useEffect(() => {
@@ -24,12 +25,17 @@ const Navbar = () => {
     return (
         <>
             <div className={`nav ${isScrolled ? 'scrolled' : ''}`}>
-                <a href="/" className="nav-title">Title</a>
-                <a className="active" href="#home">Home</a>
-                <a href="#news">News</a>
-                <a href="#contact">Contact</a>
-                <a href="#about">About</a>
-                <DarkModeToggle />
+                <div className="nav-start">
+                    <a href="/" className="nav-title">Title</a>
+                    <a className="active" href="#home">Home</a>
+                    <a href="#news">News</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#about">About</a>
+                </div>
+                <div className="nav-end">
+                    <DarkModeToggle/>
+                    <LangButton currentLang={currentLang} setCurrentLang={setCurrentLang}/>
+                </div>
             </div>
         </>
     );

@@ -6,19 +6,11 @@ export const DarkModeToggle = () => {
     useEffect(() => {
         if (isDark) {
             document.documentElement.classList.add('dark');
-
         } else {
             document.documentElement.classList.remove('dark');
         }
     }, [isDark]);
 
-    const systemPrefersDark = useMediaQuery(
-        {
-            query: "(prefers-color-scheme: dark)",
-        },
-        undefined,
-        (isSystemDark) => setIsDark(isSystemDark)
-    );
 
     return (
         <label className="switch">
