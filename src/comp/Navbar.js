@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import DarkModeToggle from "./DarkModeToggle";
 import LangButton from "./langButton";
 
-const Navbar = ({currentLang, setCurrentLang}) => {
+const Navbar = ({langData ,currentLang, setCurrentLang}) => {
     const [isScrolled, setIsScrolled] = useState(false);
 
     useEffect(() => {
@@ -26,8 +26,8 @@ const Navbar = ({currentLang, setCurrentLang}) => {
         <>
             <div className={`nav ${isScrolled ? 'scrolled' : ''}`}>
                 <div className="nav-start">
-                    <a href="/" className="nav-title">Title</a>
-                    <a className="active" href="#home">Home</a>
+                    <a href="/"><img src="/img/pp_pro_round.png" alt="pp_pro_round"/></a>
+                    <a className="active nav-title" href="#home">{langData[currentLang][0].title}</a>
                     <a href="#news">News</a>
                     <a href="#contact">Contact</a>
                     <a href="#about">About</a>

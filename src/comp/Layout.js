@@ -2,11 +2,11 @@ import React from "react"
 import DarkModeToggle from "./DarkModeToggle"
 import Navbar from "./Navbar";
 
-const Layout = ({currentLang, setCurrentLang}) => {
+const Layout = ({langData, currentLang, setCurrentLang}) => {
 
     return (
         <>
-            <Navbar currentLang={currentLang} setCurrentLang={setCurrentLang}/>
+            <Navbar langData={langData} currentLang={currentLang} setCurrentLang={setCurrentLang}/>
         </>
     );
 };

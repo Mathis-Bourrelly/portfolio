@@ -6,19 +6,19 @@ html {
 
 html {
     --color-background: white;
-    --color-text: #1f2023;
-    --color-nav-background: white;
-    --color-nav-hover-background: #b4b4b4;
+    --color-text: #0b141e;
+    --color-nav-background: #142336;
+    --color-nav-hover-background: rgba(180, 180, 180, 0.38);
     --color-nav-active-background: rgba(255, 255, 255, 0.43);
-    --color-accent-color: #3999ea;
+    --color-accent-color: #14AAE9;
 }
 html.dark {
     --color-background: #1f2023;
     --color-text: #fafafa;
-    --color-nav-background: #333;
-    --color-nav-hover-background: #565656;
-    --color-nav-active-background: #3d3d3d;
-    --color-accent-color: #167acc;
+    --color-nav-background: #142336;
+    --color-nav-hover-background: rgba(86, 86, 86, 0.42);
+    --color-nav-active-background: rgba(255, 255, 255, 0.43);
+    --color-accent-color: #14AAE9;
 }
 
 
@@ -31,6 +31,7 @@ html {
 .nav {
     position: sticky;
     top: 0;
+
     background: var(--color-nav-background);
     overflow: hidden;
     height: 3rem;
@@ -39,11 +40,11 @@ html {
 }
 
 .nav {
-    transition: background-color .4s ease;
+    transition: background-color .4s ease,color .4s ease;
 }
 
 .nav.scrolled{
-    background: rgba(255, 255, 255, 0.33);
+    background: rgba(255, 255, 255, 0.18);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(6.6px);
@@ -53,30 +54,51 @@ html {
 
 /* Style the links inside the navigation bar */
 .nav a {
+    color: #fafafa;
+    display: flex;
+    align-items: center;
     height: 3rem;
     float: left;
-    color: var(--color-text);
     text-align: center;
-    padding: 14px 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    text-decoration: none;
+    font-size: 17px;
+    align-content: center;
+}
+
+/* Style the links inside the navigation bar */
+.nav.scrolled a {
+    color: #0b141e;
+    display: flex;
+    align-items: center;
+    height: 3rem;
+    float: left;
+    text-align: center;
+    padding-left: 16px;
+    padding-right: 16px;
     text-decoration: none;
     font-size: 17px;
     align-content: center;
 }
 
 .nav a:hover {
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Ajoute une ombre au texte au survol */
+    background: var(--color-nav-hover-background);
 }
 
 
 /* Add a color to the active/current link */
 .nav a.active {
     color: var(--color-accent-color);
-    background: var(--color-nav-active-background);
+
 }
 
 .nav-title{
     font-weight: bold;
-    font-size: 40px !important
+}
+
+.nav a img {
+    height: 75%;
 }
 
 .nav-start{
@@ -156,6 +178,6 @@ input:checked + .slider:before {
     margin-left: 6px;
     font-size: 15px;
     background: var(--color-nav-active-background);
-    color: var(--color-text);
+    color: #0b141e;
 }
 
