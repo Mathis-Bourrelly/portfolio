@@ -27,10 +27,8 @@ const Navbar = ({langData ,currentLang, setCurrentLang}) => {
             <div className={`nav ${isScrolled ? 'scrolled' : ''}`}>
                 <div className="nav-start">
                     <a href="/"><img src="/img/pp_pro_round.png" alt="pp_pro_round"/></a>
-                    <a className="active nav-title" href="#home">{langData[currentLang][0].title}</a>
-                    <a href="#news">News</a>
-                    <a href="#contact">Contact</a>
-                    <a href="#about">About</a>
+                    <a className="active nav-title" href="/">{langData[currentLang].name}</a>
+                    <a href="/blog">Blog</a>
                 </div>
                 <div className="nav-end">
                     <DarkModeToggle/>
