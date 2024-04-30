@@ -1,47 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Oswald:wght@500&family=Squada+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Oswald:wght@500&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Squada+One&display=swap');
 
-.dm-mono-light {
-    font-family: "DM Mono", monospace;
-    font-weight: 300;
-    font-style: normal;
-}
-
-.dm-mono-regular {
-    font-family: "DM Mono", monospace;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.dm-mono-medium {
-    font-family: "DM Mono", monospace;
-    font-weight: 500;
-    font-style: normal;
-}
-
-.dm-mono-light-italic {
-    font-family: "DM Mono", monospace;
-    font-weight: 300;
-    font-style: italic;
-}
-
-.dm-mono-regular-italic {
-    font-family: "DM Mono", monospace;
-    font-weight: 400;
-    font-style: italic;
-}
-
-.dm-mono-medium-italic {
-    font-family: "DM Mono", monospace;
-    font-weight: 500;
-    font-style: italic;
-}
 
 html {
-    font-family: "DM Mono", monospace;
+
     background-color: var(--color-background);
     color: var(--color-text);
 }
 
+body {
+    font-family: "source-code-pro", monospace;
+}
 
 html {
     --color-background: white;
@@ -131,7 +99,8 @@ html {
 }
 
 .nav-title {
-    font-weight: bold;
+    font-size: 20px !important;
+    font-weight: bolder;
 }
 
 .nav a img {
@@ -274,9 +243,18 @@ hr {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(60px);
     border: 1px solid rgba(255, 255, 255, 0.16);
-
 }
 
+.single-post{
+    margin: 15px;
+    padding: 15px;
+    max-width: 700px;
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(60px);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+}
 
 
 .button {
@@ -312,6 +290,10 @@ hr {
 .post-title{
     font-weight: bold;
     font-size: 24px;
+}
+
+a.post-title{
+    color: var(--color-accent);
 }
 
 .post-body{

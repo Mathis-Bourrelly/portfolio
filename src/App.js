@@ -3,6 +3,7 @@ import {useState} from "react";
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 import Home from "./page/Home"
 import Blog from "./page/Blog";
+import OnePost from "./page/OnePost";
 
 function App() {
     const [currentLang, setCurrentLang] = useState("FR");
@@ -27,6 +28,7 @@ function App() {
         <Routes>
             <Route path="/" element={<Home langData={langData} currentLang={currentLang} setCurrentLang={setCurrentLang}/>}/>
             <Route path="/blog" element={<Blog langData={langData} currentLang={currentLang} setCurrentLang={setCurrentLang}/>}/>
+            <Route path="/post/:postId" element={<OnePost langData={langData} currentLang={currentLang} setCurrentLang={setCurrentLang}/>}/>
         </Routes>
     </BrowserRouter>)
 }

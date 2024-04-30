@@ -21,7 +21,7 @@ const AllBlog = ({langData ,currentLang, setCurrentLang}) => {
             let postElementsTab =response.posts.map(post => {
                     return(
                         <div key={post.id} className="post">
-                            <div className="post-title">{post.title}</div>
+                            <a className="post-title" href={"/post/"+post.id}>{post.title}</a>
                             <div className="post-body">{post.body}</div>
                             <div className="container-reactions">
                                 <div className="reactions">Reactions: {post.reactions}</div>
