@@ -13,8 +13,8 @@ function App() {
                 "title1": "MASTER",
                 "title2": "EXPERT EN DÉVELOPPEMENT LOGICIEL",
                 "title3": "EN ALTERNANCE",
-
                 "noContent": "Aucun commentaire trouvé",
+                "deleted": "Post supprimé",
             },
         "EN": {
             "name": "Mathis Bourrelly",
@@ -22,6 +22,7 @@ function App() {
             "title2": "SOFTWARE DEVELOPMENT EXPERT",
             "title3": "IN INTERNSHIP",
             "noContent": "No content found",
+            "deleted": "Deleted post",
         }
     };
     return (<BrowserRouter>

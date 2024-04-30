@@ -33,7 +33,7 @@ const AllBlog = ({langData ,currentLang, setCurrentLang}) => {
                         </div>)})
             postElements= <div className="post-list">{postElementsTab}</div>
         } else {
-            postElements = <div className="empty">{langData[currentLang][0].noContent}</div>
+            postElements = <div className="empty">{langData[currentLang].noContent}</div>
 
         }
     } else {
