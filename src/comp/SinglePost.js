@@ -1,11 +1,9 @@
 import React, {useEffect, useState} from "react";
 import Spinner from "./Spinner";
-import {useParams} from "react-router-dom";
 
 const SinglePost = ({postId, langData, currentLang, setCurrentLang}) => {
     const [response, setResponse] = useState(null);
     const [responseComment, setResponseComment] = useState(null);
-    const [responseEdit, setResponseEdit] = useState(null);
     const [isPostDeleted, setIsPostDeleted] = useState(false)
     let postElements
     let commentElements
@@ -31,7 +29,6 @@ const SinglePost = ({postId, langData, currentLang, setCurrentLang}) => {
         })
             .then(responseDelete => responseDelete.json())
             .then(result => {
-                //console.log(result.isDeleted)
                 setIsPostDeleted(result.isDeleted)
             })
             .catch(error => console.log('error', error))

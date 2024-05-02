@@ -4,6 +4,8 @@ import {BrowserRouter, Routes, Route} from "react-router-dom"
 import Home from "./page/Home"
 import Blog from "./page/Blog";
 import OnePost from "./page/OnePost";
+import NewPost from "./page/NewPost";
+import Login from "./page/login";
 
 function App() {
     const [currentLang, setCurrentLang] = useState("FR");
@@ -15,6 +17,7 @@ function App() {
                 "title3": "EN ALTERNANCE",
                 "noContent": "Aucun commentaire trouvé",
                 "deleted": "Post supprimé",
+                "newBlog": "Nouveau post",
             },
         "EN": {
             "name": "Mathis Bourrelly",
@@ -23,13 +26,16 @@ function App() {
             "title3": "IN INTERNSHIP",
             "noContent": "No content found",
             "deleted": "Deleted post",
+            "newBlog": "New post",
         }
     };
     return (<BrowserRouter>
         <Routes>
             <Route path="/" element={<Home langData={langData} currentLang={currentLang} setCurrentLang={setCurrentLang}/>}/>
             <Route path="/blog" element={<Blog langData={langData} currentLang={currentLang} setCurrentLang={setCurrentLang}/>}/>
-            <Route path="/post/:postId" element={<OnePost langData={langData} currentLang={currentLang} setCurrentLang={setCurrentLang}/>}/>
+            <Route path="/post/show/:postId" element={<OnePost langData={langData} currentLang={currentLang} setCurrentLang={setCurrentLang}/>}/>
+            <Route path="/post/new/" element={<NewPost langData={langData} currentLang={currentLang} setCurrentLang={setCurrentLang}/>}/>
+            <Route path="/login" element={<Login langData={langData} currentLang={currentLang} setCurrentLang={setCurrentLang}/>}/>
         </Routes>
     </BrowserRouter>)
 }

@@ -20,32 +20,6 @@ const Home = ({langData ,currentLang, setCurrentLang}) => {
                         <br/>
                         <br/>
                         <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
                     </div>
                 </div>
                 <div className="col-2">
@@ -61,20 +35,6 @@ const Home = ({langData ,currentLang, setCurrentLang}) => {
                             <li><p>Versionning et CI/CD : Git, Gitlab CI, Github</p></li>
                             <li><p>Vidéo et 3D : Premier pro, Photoshop, Fusion 360, Blender</p></li>
                         </ul>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
                         <br/>
                         <br/>
                         <br/>

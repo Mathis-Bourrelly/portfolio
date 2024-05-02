@@ -19,6 +19,8 @@ html {
     --color-nav-hover-background: rgba(180, 180, 180, 0.38);
     --color-nav-active-background: rgba(255, 255, 255, 0.43);
     --color-accent: #14AAE9;
+    --color-error: #b91a1a;
+    --color-valid: #2bbd12;
 }
 
 html.dark {
@@ -29,6 +31,8 @@ html.dark {
     --color-nav-hover-background: rgba(86, 86, 86, 0.42);
     --color-nav-active-background: rgba(255, 255, 255, 0.43);
     --color-accent: #14AAE9;
+    --color-error: #d95b5b;
+    --color-valid: #74d953;
 }
 
 
@@ -76,7 +80,7 @@ html {
 
 /* Style the links inside the navigation bar */
 .nav.scrolled a {
-    color: #0b141e;
+    color: var(--color-text);
     display: flex;
     align-items: center;
     height: 3rem;
@@ -337,4 +341,78 @@ a.post-title{
     100% {
         transform: rotate(360deg);
     }
+}
+
+.container-new{
+    display: flex;
+    justify-content: center;
+
+}
+
+.plus{
+    color: var(--color-accent);
+    font-size: 40px;
+    margin-left: 6px;
+    font-weight: bolder;
+    line-height: 20px;
+}
+
+.new-button{
+    text-decoration: none;
+    color: var(--color-text);
+    margin: 8px;
+    margin-top: 16px;
+    padding: 16px;
+    font-size: 20px;
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(60px);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    user-select: none;
+    display: flex;
+}
+
+.text-input {
+    display: flex;
+    align-items: center;
+    position: relative;
+    max-width: 100%;
+}
+
+.text-input {
+    font-size: 18px;
+    padding: 5px 10px;
+    width: 100%;
+    outline: none;
+    background: var(--color-background);
+    color: var(--color-text);
+    border: 1px solid #CDCDCD;
+    border-radius: 5px;
+    box-shadow: 3px 3px 2px 0px var(--color-background);
+    transition: .3s ease;
+}
+
+.text-input:focus {
+    background: var(--color-background);
+    border: 1px solid var(--color-accent);
+    border-radius: 10px;
+}
+
+.error{
+    color: var(--color-error);
+}
+
+.valid{
+    color: var(--color-valid);
+}
+
+textarea.text-input{
+    height: 150px;
+}
+
+.card.form{
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-top: 7rem;
 }

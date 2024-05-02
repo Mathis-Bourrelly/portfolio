@@ -18,10 +18,10 @@ const AllBlog = ({langData ,currentLang, setCurrentLang}) => {
     }
     if (response) {
         if (response.total > 0) {
-            let postElementsTab =response.posts.map(post => {
+            let postElementsTab = response.posts.map(post => {
                     return(
                         <div key={post.id} className="post">
-                            <a className="post-title" href={"/post/"+post.id}>{post.title}</a>
+                            <a className="post-title" href={"/post/show/"+post.id}>{post.title}</a>
                             <div className="post-body">{post.body}</div>
                             <div className="container-reactions">
                                 <div className="reactions">Reactions: {post.reactions}</div>
