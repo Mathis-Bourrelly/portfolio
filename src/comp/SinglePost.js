@@ -62,15 +62,15 @@ const SinglePost = ({postId, langData, currentLang, setCurrentLang}) => {
                     <div>
                         <input type="checkbox"  id={"like-checkbox-" + response.id} className="hidden-check-box"/>
                         <label htmlFor={"like-checkbox-" + response.id} className="button like">
-                            👍
+                            {langData[currentLang].blogLikeBtn}
                         </label>
                         <input type="checkbox" onClick={()=> editPost()} id={"edit-checkbox-" + response.id} className="hidden-check-box"/>
                         <label htmlFor={"edit-checkbox-" + response.id} className="button like">
-                            📝
+                            {langData[currentLang].blogEditBtn}
                         </label>
                         <input type="checkbox" onClick={()=> deletePost()} id={"remove-checkbox-" + response.id} className="hidden-check-box"/>
                         <label htmlFor={"remove-checkbox-" + response.id} className="button like">
-                            ❌
+                            {langData[currentLang].blogDeleteBtn}
                         </label>
                     </div>
                 </div>

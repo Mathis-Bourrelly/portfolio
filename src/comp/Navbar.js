@@ -28,11 +28,12 @@ const Navbar = ({langData ,currentLang, setCurrentLang}) => {
                 <div className="nav-start">
                     <a href="/"><img src="/img/pp_pro_round.png" alt="pp_pro_round"/></a>
                     <a className="active nav-title" href="/">{langData[currentLang].name}</a>
-                    <a href="/blog">Blog</a>
+                    <a href="/blog">{langData[currentLang].blog}</a>
                 </div>
                 <div className="nav-end">
                     <DarkModeToggle/>
                     <LangButton currentLang={currentLang} setCurrentLang={setCurrentLang}/>
+                    <a href="/login">{langData[currentLang].login}</a>
                 </div>
             </div>
         </>

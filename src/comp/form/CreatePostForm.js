@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-const CreatePostForm = () => {
+const CreatePostForm = ({langData ,currentLang, setCurrentLang}) => {
     const [title, setTitle] = useState('');
     const [userId, setUserId] = useState('1');
     const [body, setBody] = useState('');
@@ -22,16 +22,16 @@ const CreatePostForm = () => {
             });
 
             if (response.ok) {
-                setSuccessMessage('Le post a été créé avec succès.');
+                setSuccessMessage(langData[currentLang].postNewSuccessMsg);
                 setErrorMessage('');
                 setTitle('');
                 setUserId('');
                 setBody('');
             } else {
-                throw new Error('Erreur lors de la création du post.');
+                throw new Error(langData[currentLang].postNewErrorMsg);
             }
         } catch (error) {
-            setErrorMessage('Erreur lors de la création du post.');
+            setErrorMessage(langData[currentLang].postNewErrorMsg);
             setSuccessMessage('');
         }
     };
@@ -39,12 +39,12 @@ const CreatePostForm = () => {
     return (
         <div className="container">
             <div className="card form">
-                <h2>Création de post</h2>
-                {successMessage && <div className="valid">{successMessage}</div>}
+                <h2>{langData[currentLang].postCreate}</h2>
+                {successMessage && <div className="success">{successMessage}</div>}
                 {errorMessage && <div className="error">{errorMessage}</div>}
                 <form onSubmit={handleSubmit}>
                     <div>
-                        <label htmlFor="title">Titre:</label>
+                        <label htmlFor="title">{langData[currentLang].postTitle}</label>
                         <input
                             className="text-input"
                             type="text"
@@ -55,7 +55,7 @@ const CreatePostForm = () => {
                         />
                     </div>
                     <div>
-                        <label htmlFor="body">Contenu du post:</label>
+                        <label htmlFor="body">{langData[currentLang].postBody}</label>
                         <textarea
                             className="text-input"
                             id="body"
@@ -64,7 +64,7 @@ const CreatePostForm = () => {
                             required
                         />
                     </div>
-                    <button type="submit" className="new-button">Créer le post</button>
+                    <button type="submit" className="new-button">{langData[currentLang].postCreateBtn}</button>
                 </form>
             </div>
         </div>

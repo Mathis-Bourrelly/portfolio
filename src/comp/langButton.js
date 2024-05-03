@@ -1,5 +1,5 @@
 const LangButton = ({ currentLang, setCurrentLang }) => {
-    const langArray = [{"FR":"🇫🇷"},{"EN":"🇬🇧"}];
+    const langArray = [{"FR":"🇫🇷"},{"EN":"🇬🇧"},{"??":"??"}];
 
     function changeLang() {
         let selectLang = document.getElementById("lang-select").value
@@ -7,8 +7,8 @@ const LangButton = ({ currentLang, setCurrentLang }) => {
     }
 
     const languages = langArray.map(lang => (
-        <option key={Object.keys(lang)[0]} value={Object.keys(lang)[0]}>
-            {Object.values(lang)[0]}
+        <option key={Object.keys(lang)} value={Object.keys(lang)}>
+            {Object.values(lang)}
         </option>
     ));
 

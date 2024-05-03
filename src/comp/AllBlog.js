@@ -27,8 +27,10 @@ const AllBlog = ({langData ,currentLang, setCurrentLang}) => {
                                 <div className="reactions">Reactions: {post.reactions}</div>
                                 <input type="checkbox" id={"like-checkbox-"+post.id} className="hidden-check-box"/>
                                 <label htmlFor={"like-checkbox-"+post.id} className="button like">
+                                    {/*TODO REPLACE BY [currentLang].blogLikeBtn    */}
                                     👍
                                 </label>
+
                             </div>
                         </div>)})
             postElements= <div className="post-list">{postElementsTab}</div>

@@ -20,7 +20,7 @@ html {
     --color-nav-active-background: rgba(255, 255, 255, 0.43);
     --color-accent: #14AAE9;
     --color-error: #b91a1a;
-    --color-valid: #2bbd12;
+    --color-success: #2bbd12;
 }
 
 html.dark {
@@ -32,7 +32,7 @@ html.dark {
     --color-nav-active-background: rgba(255, 255, 255, 0.43);
     --color-accent: #14AAE9;
     --color-error: #d95b5b;
-    --color-valid: #74d953;
+    --color-success: #74d953;
 }
 
 
@@ -383,7 +383,7 @@ a.post-title{
 .text-input {
     font-size: 18px;
     padding: 5px 10px;
-    width: 100%;
+    width: 95%;
     outline: none;
     background: var(--color-background);
     color: var(--color-text);
@@ -403,8 +403,8 @@ a.post-title{
     color: var(--color-error);
 }
 
-.valid{
-    color: var(--color-valid);
+.success{
+    color: var(--color-success);
 }
 
 textarea.text-input{
